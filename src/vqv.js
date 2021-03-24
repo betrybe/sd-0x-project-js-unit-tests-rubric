@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 /*
   Use template literals para escrever uma função que,
   recebe seu nome e sua idade e retorna o parágrafo descrito abaixo.
@@ -20,8 +18,7 @@ const vqv = (nome, idade) => {
   if (typeof idade !== 'number') {
     return undefined;
   }
-  const phrase =
-    `Oi, meu nome é ${nome}!
+  const phrase = `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;

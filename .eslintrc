@@ -1,6 +1,0 @@
-{
-  "extends": "trybe-fundamentals",
-  "rules": {
-    "eslint max-len": false
-  }
-}

@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 const assert = require('assert');
 const productDetails = require('../src/productDetails');
 
