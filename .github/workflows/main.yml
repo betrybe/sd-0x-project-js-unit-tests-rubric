@@ -26,7 +26,7 @@ jobs:
         uses: betrybe/jest-evaluator-action@v5
         with:
           repository-test-name: 'betrybe/sd-0x-project-js-unit-tests-tests'
-          repository-test-branch: 'master'
+          repository-test-branch: 'lucas-update'
       - name: Store evaluation step
         uses: betrybe/store-evaluation-action@v2
         with:
