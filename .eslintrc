@@ -1,7 +1,6 @@
 {
-  "extends": "airbnb",
+  "extends": "trybe-fundamentals",
   "rules": {
-    "no-console": "off",
-    "no-param-reassign": "off"
+    "eslint max-len": false
   }
 }
