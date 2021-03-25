@@ -24,7 +24,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
 - [Como desenvolver](#como-desenvolver)
-  - [Code Climate](#code-climate)
+  - [EsLint](#eslint)
 - [Requisitos do projeto](#requisitos-do-projeto)
 - [Lista de requisitos](#lista-de-requisitos)
   - [Implemente a função average](#implemente-a-função-average)
@@ -184,10 +184,21 @@ Para entregar o seu projeto você deverá criar um _Pull Request_ neste reposit�
 
 Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
 
-### Code Climate
+### EsLint
 
-Seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate**.
-MELHORIA - ADICIONAR IMAGENS E EXPLICAÇÃO SOBRE OS TESTES DO CODECLIMATE
+Usaremos o [ESLint](https://eslint.org/) para fazer a análise estática do seu código.
+
+Para garantir a qualidade do seu código de forma a tê-lo mais legível, de mais fácil manutenção e seguindo as boas práticas de desenvolvimento nós utilizamos neste projeto o linter `ESLint`. Para rodar o linter localmente no seu projeto, execute o comando abaixo:
+
+```bash
+npm run lint
+```
+
+Caso ainda fique alguma dúvida, você pode consultar nosso conteúdo sobre [`ESLint`](https://app.betrybe.com/course/real-life-engineer/eslint)
+
+ **PULL REQUESTS COM ISSUES DE LINTER NÃO SERÃO AVALIADAS. ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
+
+Você pode também instalar o plugin do `ESLint` no `VSCode`, bastar ir em extensions e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
 ---
 
@@ -201,7 +212,7 @@ A função average recebe um array (tamanho variável) e retorna a média dos va
 
   **O que será avaliado**
 
-  * Será validado se..
+  * Será validado se o comportamento da função "average" está correto'.
 
 ### 2 - Implemente os casos de teste para a função `numbers`
 
@@ -209,7 +220,7 @@ A função average recebe um array (tamanho variável) e retorna a média dos va
 
   **O que será avaliado**
 
-  * Será validado se..
+  * Será validado se o teste da função `numbers` verifica se o retorno da função é um array e se o array retornado contém somente números.
 
 ### 3 - Implemente a função `vqv`
 
@@ -226,7 +237,7 @@ Caso a função seja chamada sem nenhum parâmetro, o valor undefined deve ser r
 
   **O que será avaliado**
 
-  * Será validado se..
+  * Será validado se a função `vqv` retorna a frase esperada com nome e idade.
 
 ### 4 - Implemente os casos de teste para a função `circle`
 
@@ -234,7 +245,7 @@ A função `circle` recebe o raio de um círculo e retorna um objeto contendo su
 
   **O que será avaliado**
 
-  * Será validado se..
+  * Será validado se o teste da função `circle` verifica se ao receber um raio, o retorno da função é um objeto com as informações corretas (Raio, Área e Circunferência).
 
 ### 5 - Implemente a função `createStudent`
 
@@ -245,7 +256,7 @@ O arquivo `createStudent.spec.js` contém os testes para `createStudent` já imp
 
   **O que será avaliado**
 
-  * Será validado se..
+  * Será validado se a função `createStudent` retorna o objeto esperado.
 
 ### 6 - Implemente os casos de teste para a função `productDetails`
 
@@ -273,7 +284,7 @@ Essa função já está implementada no arquivo `src/productDetails.js`. Escreva
 
   **O que será avaliado**
 
-  * Será validado se..
+  * Será validado se o teste da função `productDetails` verifica se ao receber duas strings, o retorno da função é um array de objetos e se cada objeto contém os dados necessários.
 
 ### 7 - Implemente a função `objCalculator`
 Desenvolva um objeto calculator que possui quatro chaves:
@@ -286,14 +297,14 @@ Para cada uma delas atribua uma função que realiza a respectiva operação. A 
 
   **O que será avaliado**
 
-  * Será validado se..
+  * Será validado se a função `objCalculator` retorna os valores esperados.
 
 ### 8 - Implemente a função `myCounter`
 A função myCounter possui dois loops aninhados que inserem valores dentro de um array. Como podemos perceber, eles vão adicionando valores ao array até sua condição de parada. Corrija a função `myCounter` para que a função retorne o array correto. O arquivo `myCounter.spec.js` contém os testes para `myCounter` já implementados. Implemente a função no arquivo `src/myCounter.js` de forma que ela atenda aos testes propostos.
 
   **O que será avaliado**
 
-  * Será validado se..
+  * Será validado se a função `myCounter` retorna os dados esperados.
 
 ### 9 - Implemente os casos de teste e a função `createMenu`
 
@@ -323,7 +334,8 @@ A estrutura deste código e deste objeto já foi definida e você irá implement
 
   **O que será avaliado**
 
-  * Será validado se..
+  * Será validado se a função `createMenu` retorna os dados esperados.
+  * Será validado se o teste da função `createMenu` verifica cada um dos retornos da função e se estes retornos têm o comportamento esperado.
 
 ---
 
