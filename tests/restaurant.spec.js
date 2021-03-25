@@ -1,6 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
-
 const assert = require('assert');
 const createMenu = require('../src/restaurant');
  
@@ -49,8 +46,8 @@ const createMenu = require('../src/restaurant');
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
 
-describe('#createMenu', () => {
-  it('tests the function has the correct behaviour', () => {
+describe('9 - Implemente os casos de teste e a função `createMenu`', () => {
+  it('Verifica se a função `createMenu` tem o comportamento esperado', () => {
     assert.fail();
     // TESTE 1: Verifique se o retorno da função createMenu() é um objeto que possui, 
     // mas não é necessariamente é limitado à chave `fetchMenu`, a qual tem como valor uma função.

@@ -13,13 +13,19 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ## SUMÁRIO
 
+- [Boas vindas ao repositório do projeto de Trivia!](#boas-vindas-ao-repositório-do-projeto-de-trivia)
+- [Sumário](#sumário)
 - [Habilidades](#habilidades)
-- [O que será desenvolvido](#o-que-será-desenvolvido)
-- [Data de entrega](#data-de-entrega)
-- [Como desenvolver](#como-desenvolver)
+- [Entregáveis](#entregáveis)
+  - [O que deverá ser desenvolvido](#o-que-será-desenvolvido)
+  - [Desenvolvimento](#desenvolvimento)
+  - [Data de entrega](#data-de-entrega)
+- [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
+  - [Durante o desenvolvimento](#durante-o-desenvolvimento)
+- [Como desenvolver](#como-desenvolver)
+  - [EsLint](#eslint)
 - [Requisitos do projeto](#requisitos-do-projeto)
-  - [Code Climate](#code-climate)
 - [Lista de requisitos](#lista-de-requisitos)
   - [Implemente a função average](#implemente-a-função-average)
   - [Implemente os casos de teste para a função numbers](#implemente-os-casos-de-teste-para-a-função-numbers)
@@ -30,10 +36,8 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Implemente a função objCalculator](#Implemente-a-função-objCalculator)
   - [Implemente a função myCounter](#implemente-a-função-myCounter)
   - [Implemente os casos de teste e a função createMenu](#implemente-os-casos-de-teste-e-a-função-createMenu)
-- [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
-  - [Durante o desenvolvimento](#durante-o-desenvolvimento)
-  - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
-  - [Revisando um Pull Request](#revisando-um-pull-request)
+- [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
+- [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
 
 ---
@@ -48,9 +52,31 @@ Nesse projeto, você será capaz de:
 
 ---
 
+# Entregáveis
+
+Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
+
+Lembre-se que você pode consultar nosso conteúdo sobre
+[Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
+
+---
+
 ## O que será desenvolvido
 
 Você implementará várias funções para atender aos requisitos propostos e/ou testes unitários para garantir que as implementações das funções estão corretas.
+
+---
+
+## Desenvolvimento
+
+* Nos testes unitários que não estão implementados, vocês verão um `assert.fail();`. Esse código deve ser removido a partir do momento que vocês começarem a escrever o teste unitário. Ele só existe para fazer o teste falhar. Se o `assert.fail();` não estivesse nos blocos em que não há testes unitários implementados ainda, o teste iria passar com sucesso, pois não haveria nada para ser testado dentro.
+
+* Os comandos que você utilizará com mais frequência são:
+  6. `npm test` _(executa todos os testes presentes na aplicação)_
+  7. `npm test path/to/file` _(executa apenas os testes presentes no arquivo path/to/file)_
+    * exemplo: `npm test tests/average.spec.js`
+  8. `jest path/to/file` _(executa apenas os testes presentes no arquivo path/to/file)_
+    * exemplo: `jest tests/average.spec.js`
 
 ---
 
@@ -60,16 +86,16 @@ Você implementará várias funções para atender aos requisitos propostos e/ou
 
   - Será um dia de projeto;
 
-  - O projeto tem até a seguinte data: `DD/MM/YYYY - 14:00h` para ter entregue a avaliação final.
+  - Data de entrega para avaliação final do projeto: `dd/mm/yyyy - 14:00h
 
 ---
 
-## Como desenvolver
+# Instruções para entregar seu projeto:
 
-### Antes de começar a desenvolver:
+## Antes de começar a desenvolver:
 
 1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-0x-project-js-unit-tests-rubric.git`.
+  * `git clone https://github.com/tryber/sd-0x-project-js-unit-tests-rubric.git`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd sd-0x-project-js-unit-tests-rubric`
 
@@ -120,7 +146,24 @@ module.exports = average
 
 ---
 
-## Requisitos do projeto
+## Durante o desenvolvimento
+
+:warning: **PULL REQUESTS COM ISSUES NO LINTER NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** :warning:
+
+* Faça `commits` das alterações que você fizer no código regularmente
+
+* Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
+
+* Os comandos que você utilizará com mais frequência são:
+  1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
+  2. `git add` _(para adicionar arquivos ao stage do Git)_
+  3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
+  4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
+  5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
+
+---
+
+## Como desenvolver
 
 Este repositório contém um _template_ de uma aplicação **NodeJS** (observe a existência do arquivo _package.json_).
 Após clonar o projeto e instalar as dependências, você não precisará realizar nenhuma configuração adicional.
@@ -141,23 +184,45 @@ Para entregar o seu projeto você deverá criar um _Pull Request_ neste reposit�
 
 Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
 
-### Code Climate
+### EsLint
 
-Seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate**.
+Usaremos o [ESLint](https://eslint.org/) para fazer a análise estática do seu código.
+
+Para garantir a qualidade do seu código de forma a tê-lo mais legível, de mais fácil manutenção e seguindo as boas práticas de desenvolvimento nós utilizamos neste projeto o linter `ESLint`. Para rodar o linter localmente no seu projeto, execute o comando abaixo:
+
+```bash
+npm run lint
+```
+
+Caso ainda fique alguma dúvida, você pode consultar nosso conteúdo sobre [`ESLint`](https://app.betrybe.com/course/real-life-engineer/eslint)
+
+ **PULL REQUESTS COM ISSUES DE LINTER NÃO SERÃO AVALIADAS. ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
+
+Você pode também instalar o plugin do `ESLint` no `VSCode`, bastar ir em extensions e baixar o [plugin `ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
 
 ---
 
-### Lista de requisitos
+## Requisitos do projeto
 
-### Implemente a função `average`
+⚠ **PULL REQUESTS COM ISSUES NO CODE CLIMATE NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
 
-A função average recebe um array (tamanho variável) e retorna a média dos valores recebidos. Caso a função receba algum valor não númerico ou um array vazio, o valor undefined deve ser retornado. Todos os resultados devem ser arredondados para valores inteiros. Ex: 4,6 vira 5; 1,3 vira 1. O arquivo `average.spec.js` contém os testes para `average` já implementados. Implemente a função no arquivo `src/average.js` de forma que ela atenda aos testes propostos.  
+### 1 - Implemente a função `average`
 
-### Implemente os casos de teste para a função `numbers`
+A função average recebe um array (tamanho variável) e retorna a média dos valores recebidos. Caso a função receba algum valor não númerico ou um array vazio, o valor undefined deve ser retornado. Todos os resultados devem ser arredondados para valores inteiros. Ex: 4,6 vira 5; 1,3 vira 1. O arquivo `average.spec.js` contém os testes para `average` já implementados. Implemente a função no arquivo `src/average.js` de forma que ela atenda aos testes propostos.
+
+  **O que será avaliado**
+
+  * Será validado se o comportamento da função "average" está correto'.
+
+### 2 - Implemente os casos de teste para a função `numbers`
 
  A função `numbers` recebe um array (tamanho variável) e retorna true se todos os parâmetros forem do tipo 'number' e false caso contrário. Essa função já está implementada no arquivo `src/numbers.js`. Escreva os testes para essa função para garantir que a implementação de `numbers` está correta.
 
-### Implemente a função `vqv`
+  **O que será avaliado**
+
+  * Será validado se o teste da função `numbers` verifica se o retorno da função é um array e se o array retornado contém somente números.
+
+### 3 - Implemente a função `vqv`
 
 Use template literals para escrever uma função que recebe seu nome e sua idade e retorna o parágrafo descrito abaixo:
 
@@ -170,18 +235,30 @@ trabalho na Trybe e mando muito em programação!
 
 Caso a função seja chamada sem nenhum parâmetro, o valor undefined deve ser retornado. O arquivo `vqv.spec.js` contém os testes para `vqv` já implementados. Implemente a função no arquivo `src/vqv.js` de forma que ela atenda aos testes propostos.
 
-### Implemente os casos de teste para a função `circle`
+  **O que será avaliado**
+
+  * Será validado se a função `vqv` retorna a frase esperada com nome e idade.
+
+### 4 - Implemente os casos de teste para a função `circle`
 
 A função `circle` recebe o raio de um círculo e retorna um objeto contendo suas informações (Raio, Área e Circunferência). Se não for especificado um raio, a função retorna `undefined`. Essa função já está implementada no arquivo `src/circle.js`. Escreva os testes para essa função para garantir que a implementação de `circle` está correta.
 
-### Implemente a função `createStudent`
+  **O que será avaliado**
+
+  * Será validado se o teste da função `circle` verifica se ao receber um raio, o retorno da função é um objeto com as informações corretas (Raio, Área e Circunferência).
+
+### 5 - Implemente a função `createStudent`
 
 A função `createStudent` recebe como parâmetro um nome, e retorna um objeto contendo duas chaves:
     (1) name, contendo o nome passado como parâmetro;
     (2) feedback, contendo uma função que retorna a frase 'Eita pessoa boa!' ao ser chamada.
 O arquivo `createStudent.spec.js` contém os testes para `createStudent` já implementados. Implemente a função no arquivo `src/createStudent.js` de forma que ela atenda aos testes propostos.
 
-### Implemente os casos de teste para a função `productDetails`
+  **O que será avaliado**
+
+  * Será validado se a função `createStudent` retorna o objeto esperado.
+
+### 6 - Implemente os casos de teste para a função `productDetails`
 
 A função `productDetails` recebe duas strings que representam nomes de produtos, e retorna um array contendo dois objetos com os detalhes dos respectivos produtos:
 
@@ -205,7 +282,11 @@ productDetails('Alcool gel', 'Máscara') // Retorna:
 
 Essa função já está implementada no arquivo `src/productDetails.js`. Escreva os testes para essa função no arquivo `tests/productDetails.js` para garantir que a implementação de `productDetails` está correta.
 
-### Implemente a função `objCalculator`
+  **O que será avaliado**
+
+  * Será validado se o teste da função `productDetails` verifica se ao receber duas strings, o retorno da função é um array de objetos e se cada objeto contém os dados necessários.
+
+### 7 - Implemente a função `objCalculator`
 Desenvolva um objeto calculator que possui quatro chaves:
   - add;
   - mult;
@@ -214,10 +295,18 @@ Desenvolva um objeto calculator que possui quatro chaves:
 
 Para cada uma delas atribua uma função que realiza a respectiva operação. A função deve receber dois inteiros e retornar um inteiro. Os resultados das divisões devem sempre ser arredondados para baixo. O arquivo `objCalculator.spec.js` contém os testes para `objCalculator` já implementados. Implemente a função no arquivo `src/objCalculator.js` de forma que ela atenda aos testes propostos.
 
-### Implemente a função `myCounter`
-A função myCounter possui dois loops aninhados que inserem valores dentro de um array. Como podemos perceber, eles vão adicionando valores ao array até sua condição de parada. Corrija a função `myCounter` para que a função retorne o array correto. O arquivo `myCounter.spec.js` contém os testes para `myCounter` já implementados. Implemente a função no arquivo `src/myCounter.js` de forma que ela atenda aos testes propostos. 
+  **O que será avaliado**
 
-### Implemente os casos de teste e a função `createMenu`
+  * Será validado se a função `objCalculator` retorna os valores esperados.
+
+### 8 - Implemente a função `myCounter`
+A função myCounter possui dois loops aninhados que inserem valores dentro de um array. Como podemos perceber, eles vão adicionando valores ao array até sua condição de parada. Corrija a função `myCounter` para que a função retorne o array correto. O arquivo `myCounter.spec.js` contém os testes para `myCounter` já implementados. Implemente a função no arquivo `src/myCounter.js` de forma que ela atenda aos testes propostos.
+
+  **O que será avaliado**
+
+  * Será validado se a função `myCounter` retorna os dados esperados.
+
+### 9 - Implemente os casos de teste e a função `createMenu`
 
 **Agora prepare-se! Esse último requisito vai te guiar através de um longo e rico processo de desenvolvimento orientado a testes (Test Driven Development, ou TDD). Dará trabalho, mas vale a pena!**
 
@@ -242,63 +331,41 @@ A estrutura deste código e deste objeto já foi definida e você irá implement
   11. No arquivo `tests/restaurant.spec.js`, escreva um teste que verifica que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`.
   12. No arquivo `src/restaurant.js`, adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
----
 
-## Instruções para entregar seu projeto:
+  **O que será avaliado**
 
-### Durante o desenvolvimento
-
- ⚠ **PULL REQUESTS COM ISSUES NO CODE CLIMATE NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
-
-* Nos testes unitários que não estão implementados, vocês verão um `assert.fail();`. Esse código deve ser removido a partir do momento que vocês começarem a escrever o teste unitário. Ele só existe para fazer o teste falhar. Se o `assert.fail();` não estivesse nos blocos em que não há testes unitários implementados ainda, o teste iria passar com sucesso, pois não haveria nada para ser testado dentro.
-
-* Faça `commits` das alterações que você fizer no código regularmente
-
-* Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto
-
-* Os comandos que você utilizará com mais frequência são:
-  1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-  2. `git add` _(para adicionar arquivos ao stage do Git)_
-  3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-  4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-  5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
-  6. `npm test` _(executa todos os testes presentes na aplicação)_
-  7. `npm test path/to/file` _(executa apenas os testes presentes no arquivo path/to/file)_
-    * exemplo: `npm test tests/average.spec.js`
-  8. `jest path/to/file` _(executa apenas os testes presentes no arquivo path/to/file)_
-    * exemplo: `jest tests/average.spec.js`
+  * Será validado se a função `createMenu` retorna os dados esperados.
+  * Será validado se o teste da função `createMenu` verifica cada um dos retornos da função e se estes retornos têm o comportamento esperado.
 
 ---
 
-### Depois de terminar o desenvolvimento (OPCIONAL)
+## Depois de terminar o desenvolvimento (opcional)
 
-Para **"entregar"** seu projeto, siga os passos a seguir:
+Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
 
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`
+* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
 
-Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um video explicativo](https://vimeo.com/362189205).
+  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
 
-⚠ Lembre-se que garantir que todas as _issues_ comentadas pelo CodeClimate estão resolvidas! ⚠
+  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
 
----
+  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-0x`.
 
-### Revisando um Pull Request
+Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
 
-À medida que você e as outras pessoas que estudam na Trybe forem entregando os projetos, vocês receberão um alerta via Slack para também fazer a revisão dos Pull Requests dos seus colegas. Fiquem atentos às mensagens do "Pull Reminders" no Slack!
-
-Use o material que você já viu sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os projetos que chegaram para você.
+### Revisando um pull request
 
 Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
 
+#VQV
+
 ---
+
 ## Avisos finais
 
 Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
 
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://bit.ly/2OfLJPn)
+Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
 
 O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
 
