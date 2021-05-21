@@ -58,7 +58,7 @@ const melissandre = {
   phrases: ['Death By Fire Is The Purest Death.', 'For The Night Is Dark And Full Of Terrors.'],
 };
 
-describe('8 - Implemente os casos de teste para a função `getCharacter`', () => {
+describe('9 - Implemente os casos de teste para a função `getCharacter`', () => {
   it('Verifica se a função `getCharacter` retorna o objeto do personagem corretamente.', () => {
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
