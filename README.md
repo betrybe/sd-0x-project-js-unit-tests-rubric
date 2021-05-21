@@ -27,15 +27,16 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [EsLint](#eslint)
 - [Requisitos do projeto](#requisitos-do-projeto)
 - [Lista de requisitos](#lista-de-requisitos)
-  - [Implemente a função average](#implemente-a-função-average)
-  - [Implemente os casos de teste para a função numbers](#implemente-os-casos-de-teste-para-a-função-numbers)
-  - [Implemente a função vqv](#implemente-a-função-vqv)
-  - [Implemente os casos de teste para a função circle](#implemente-os-casos-de-teste-para-a-função-circle)
-  - [Implemente a função createStudent](#implemente-a-função-createStudent)
-  - [Implemente os casos de teste para a função productDetails](#implemente-os-casos-de-teste-para-a-função-productDetails)
-  - [Implemente a função objCalculator](#Implemente-a-função-objCalculator)
-  - [Implemente a função myCounter](#implemente-a-função-myCounter)
-  - [Implemente os casos de teste e a função createMenu](#implemente-os-casos-de-teste-e-a-função-createMenu)
+  - [Implemente a função average](#1---implemente-a-função-average)
+  - [Implemente os casos de teste para a função numbers](#2---implemente-os-casos-de-teste-para-a-função-numbers)
+  - [Implemente a função vqv](#3---implemente-a-função-vqv)
+  - [Implemente os casos de teste para a função circle](#4---implemente-os-casos-de-teste-para-a-função-circle)
+  - [Implemente a função createStudent](#5---implemente-a-função-createStudent)
+  - [Implemente os casos de teste para a função productDetails](#6---implemente-os-casos-de-teste-para-a-função-productDetails)
+  - [Implemente a função objCalculator](#7---Implemente-a-função-objCalculator)
+  - [Implemente a função myCounter](#8---implemente-a-função-myCounter)
+  - [Implemente os casos de teste para a função getCharacter](#9---implemente-os-casos-de-teste-para-a-função-getCharacter)
+  - [Implemente os casos de teste e a função createMenu](#10---implemente-os-casos-de-teste-e-a-função-createmenu)
 - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
 - [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
@@ -306,7 +307,31 @@ A função myCounter possui dois loops aninhados que inserem valores dentro de u
 
   * Será validado se a função `myCounter` retorna os dados esperados.
 
-### 9 - Implemente os casos de teste e a função `createMenu`
+### 9 - Implemente os casos de teste para a função `getCharacter`
+
+A função `getCharacter` recebe uma string que representa o nome de um personagem e retorna um objeto contendo seu nome, sua classe e suas frases.
+
+```javascript
+getCharacter('Arya') // Retorna : 
+
+{
+  name: 'Arya',
+  class: 'Rogue' ,
+  phrases: ['Not today', 'A girl has no name.']
+}
+```
+
+Essa função já está implementada no arquivo `src/getCharacter.js`. Escreva os testes para essa função no arquivo `tests/getCharacter.spec.js` para garantir que a implementação de `getCharacter` está correta.
+
+  **O que será avaliado**
+
+  * Será validado se o teste da função `getCharacter` verifica se, ao receber uma string, o retorno da função é o  esperado - de acordo com a tabela apresentada no arquivo de testes.
+
+  * Será validado se o teste da função `getCharacter` verifica se, ao não receber nenhum parâmetro, o retorno da função é `undefined`.
+
+  *Será validado se o teste da função `getCharacter` verifica se o parâmetro é case sensitive.
+
+### 10 - Implemente os casos de teste e a função `createMenu`
 
 **Agora prepare-se! Esse último requisito vai te guiar através de um longo e rico processo de desenvolvimento orientado a testes (Test Driven Development, ou TDD). Dará trabalho, mas vale a pena!**
 

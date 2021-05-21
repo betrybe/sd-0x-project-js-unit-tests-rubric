@@ -33,7 +33,11 @@
       "bonus": false
     },
     {
-      "description": "9 - Implemente os casos de teste e a função `createMenu`",
+      "description": "9 - Implemente os casos de teste da função `getCharacter`",
+      "bonus": false
+    },
+    {
+      "description": "10 - Implemente os casos de teste e a função `createMenu`",
       "bonus": false
     }
   ]
