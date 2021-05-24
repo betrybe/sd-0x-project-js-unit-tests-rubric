@@ -4,7 +4,10 @@
   "description": "Project for block 8",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint:fix": "eslint --fix",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx"
   },
   "repository": {
     "type": "git",
